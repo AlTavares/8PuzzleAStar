@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA075F811D5EB8300032789A /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA075F801D5EB8300032789A /* Tests.swift */; };
+		DA075F991D5EBA3A0032789A /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3051D5D3A2100898148 /* AStar.swift */; };
+		DA075F9A1D5EBA3A0032789A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3071D5D3AED00898148 /* Board.swift */; };
+		DAA7D3061D5D3A2100898148 /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3051D5D3A2100898148 /* AStar.swift */; };
+		DAA7D3081D5D3AED00898148 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3071D5D3AED00898148 /* Board.swift */; };
+		DADE59291D5AA3BF00F30331 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE59281D5AA3BF00F30331 /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DADE59231D5AA3BF00F30331 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DA075F7E1D5EB8300032789A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA075F801D5EB8300032789A /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		DA075F821D5EB8300032789A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA7D3051D5D3A2100898148 /* AStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AStar.swift; sourceTree = "<group>"; };
+		DAA7D3071D5D3AED00898148 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		DADE59251D5AA3BF00F30331 /* 8PuzleAStar */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 8PuzleAStar; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADE59281D5AA3BF00F30331 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA075F7B1D5EB8300032789A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE59221D5AA3BF00F30331 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA075F7F1D5EB8300032789A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DA075F801D5EB8300032789A /* Tests.swift */,
+				DA075F821D5EB8300032789A /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DADE591C1D5AA3BF00F30331 = {
+			isa = PBXGroup;
+			children = (
+				DADE59271D5AA3BF00F30331 /* 8PuzleAStar */,
+				DA075F7F1D5EB8300032789A /* Tests */,
+				DADE59261D5AA3BF00F30331 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DADE59261D5AA3BF00F30331 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DADE59251D5AA3BF00F30331 /* 8PuzleAStar */,
+				DA075F7E1D5EB8300032789A /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DADE59271D5AA3BF00F30331 /* 8PuzleAStar */ = {
+			isa = PBXGroup;
+			children = (
+				DADE59281D5AA3BF00F30331 /* main.swift */,
+				DADE59371D5AAA8A00F30331 /* Sources */,
+			);
+			path = 8PuzleAStar;
+			sourceTree = "<group>";
+		};
+		DADE59371D5AAA8A00F30331 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DAA7D3051D5D3A2100898148 /* AStar.swift */,
+				DAA7D3071D5D3AED00898148 /* Board.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA075F7D1D5EB8300032789A /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA075F831D5EB8300032789A /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				DA075F7A1D5EB8300032789A /* Sources */,
+				DA075F7B1D5EB8300032789A /* Frameworks */,
+				DA075F7C1D5EB8300032789A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = DA075F7E1D5EB8300032789A /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DADE59241D5AA3BF00F30331 /* 8PuzleAStar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADE592C1D5AA3BF00F30331 /* Build configuration list for PBXNativeTarget "8PuzleAStar" */;
+			buildPhases = (
+				DADE59211D5AA3BF00F30331 /* Sources */,
+				DADE59221D5AA3BF00F30331 /* Frameworks */,
+				DADE59231D5AA3BF00F30331 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 8PuzleAStar;
+			productName = 8PuzleAStar;
+			productReference = DADE59251D5AA3BF00F30331 /* 8PuzleAStar */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DADE591D1D5AA3BF00F30331 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alexandre Mantovani Tavares";
+				TargetAttributes = {
+					DA075F7D1D5EB8300032789A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DADE59241D5AA3BF00F30331 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DADE59201D5AA3BF00F30331 /* Build configuration list for PBXProject "8PuzleAStar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DADE591C1D5AA3BF00F30331;
+			productRefGroup = DADE59261D5AA3BF00F30331 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DADE59241D5AA3BF00F30331 /* 8PuzleAStar */,
+				DA075F7D1D5EB8300032789A /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA075F7C1D5EB8300032789A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA075F7A1D5EB8300032789A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA075F811D5EB8300032789A /* Tests.swift in Sources */,
+				DA075F991D5EBA3A0032789A /* AStar.swift in Sources */,
+				DA075F9A1D5EBA3A0032789A /* Board.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE59211D5AA3BF00F30331 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA7D3081D5D3AED00898148 /* Board.swift in Sources */,
+				DADE59291D5AA3BF00F30331 /* main.swift in Sources */,
+				DAA7D3061D5D3A2100898148 /* AStar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DA075F841D5EB8300032789A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tavares.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA075F851D5EB8300032789A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tavares.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DADE592A1D5AA3BF00F30331 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DADE592B1D5AA3BF00F30331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DADE592D1D5AA3BF00F30331 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DADE592E1D5AA3BF00F30331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA075F831D5EB8300032789A /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA075F841D5EB8300032789A /* Debug */,
+				DA075F851D5EB8300032789A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DADE59201D5AA3BF00F30331 /* Build configuration list for PBXProject "8PuzleAStar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADE592A1D5AA3BF00F30331 /* Debug */,
+				DADE592B1D5AA3BF00F30331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADE592C1D5AA3BF00F30331 /* Build configuration list for PBXNativeTarget "8PuzleAStar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADE592D1D5AA3BF00F30331 /* Debug */,
+				DADE592E1D5AA3BF00F30331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DADE591D1D5AA3BF00F30331 /* Project object */;
+}
