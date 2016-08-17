@@ -24,9 +24,15 @@ class Tests: XCTestCase {
 
     }
 
+    func testAStar() {
+        measureBlock {
+            let path = AStar.solve(BoardStub.worst, goal: BoardStub.goal)
+        }
+    }
+
     func testChildrenPuzzles() {
-        print(BoardStub.blankInCenter.childrenBoards)
-        XCTAssertEqual(BoardStub.blankInCenter.childrenBoards.count, 4)
+        // print(BoardStub.blankInCenter.childrenBoards)
+        // XCTAssertEqual(BoardStub.blankInCenter.childrenBoards.count, 4)
     }
 
     func testPositions() {
@@ -45,22 +51,29 @@ class Tests: XCTestCase {
 }
 
 struct BoardStub {
-    static let goal = Board(nodes: [
+
+    static let goal = Board(state: [
         [1, 2, 3],
         [8, 0, 4],
         [7, 6, 5]
-    ])
+        ], parent: nil, goal: nil)
 
-    static let puzzle = Board(nodes: [
-        [1, 3, 4],
-        [8, 6, 2],
-        [0, 7, 5]
-    ])
+    static let medium = Board(state: [
+        [2, 8, 1],
+        [0, 4, 3],
+        [7, 6, 5]
+        ], parent: nil, goal: BoardStub.goal)
 
-    static let blankInCenter = Board(nodes: [
-        [3, 2, 1],
-        [8, 0, 6],
-        [7, 5, 4]
-        ], goal: BoardStub.goal)
+    static let hard = Board(state: [
+        [2, 8, 0],
+        [4, 6, 3],
+        [1, 7, 5]
+        ], parent: nil, goal: BoardStub.goal)
+
+    static let worst = Board(state: [
+        [5, 6, 7],
+        [4, 0, 8],
+        [3, 2, 1]
+        ], parent: nil, goal: BoardStub.goal)
 
 }

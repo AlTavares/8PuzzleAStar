@@ -9,7 +9,7 @@
 import Foundation
 
 class AStar {
-    class func solve<T: Node>(initialNode: T, goal: T) {
+    class func solve<T: Node>(initialNode: T, goal: T) -> [T]? {
         var frontier = PriorityQueue.init(ascending: true, startingValues: [initialNode])
         var explored = Dictionary<T, Float>()
         explored[initialNode] = 0
@@ -17,7 +17,6 @@ class AStar {
 
         while !frontier.isEmpty {
             nodesSearched += 1
-            print(nodesSearched)
             let currentNode = frontier.pop()! // we know if there are still items, we can pop one
 
             if currentNode.isGoal {
@@ -34,6 +33,7 @@ class AStar {
             }
         }
 
+        return nil
     }
 
 }
@@ -55,20 +55,20 @@ protocol Node: class, Comparable, Hashable { // , Comparable, Hashable {
     var heuristic: Float! { get }
     var children: [Self] { get }
     var isGoal: Bool { get }
-    func backtrack()
+    func backtrack() -> [Self]
 }
 
 typealias Pieces = [[Int]]
 
 func == (lhs: Board, rhs: Board) -> Bool {
-    return lhs.positions == rhs.positions
+    return lhs === rhs
 }
 
 func < (lhs: Board, rhs: Board) -> Bool {
     return (lhs.cost + lhs.heuristic) < (rhs.cost + rhs.heuristic)
 }
 
-final class Board: Node, CustomStringConvertible {
+final class Board: Node {
     let state: Pieces
     let parent: Board?
     let cost: Float
@@ -80,20 +80,13 @@ final class Board: Node, CustomStringConvertible {
     init(state: Pieces, parent: Board?, goal: Board?) {
         self.state = state
         self.parent = parent
-        self.cost = parent != nil ? parent!.cost + 1: 0
+        self.cost = parent != nil ? parent!.cost : 0
         self.goal = goal
         self.calculatePositions()
         self.heuristic = Float(manhattan())
     }
 
     var hashValue: Int { return (Int)(self.cost + self.heuristic) }
-
-    var description: String {
-        var string = "\n" + state.map { $0.description }.joinWithSeparator("\n")
-        string += "\nheuristic: \(heuristic)"
-        string += "\ncost: \(cost)"
-        return string
-    }
 
     // heuristic func for the AStar
     func manhattan() -> Int {
@@ -117,7 +110,7 @@ final class Board: Node, CustomStringConvertible {
     }
 
     private func moveUp() -> Board? {
-        if blank.line == 0 { return nil }
+        if blank.column == 0 { return nil }
         let childNodes = swapNodes(position1: blank, position2: Position(column: blank.column, line: blank.line - 1))
         return Board(state: childNodes, parent: self, goal: goal)
     }
@@ -132,7 +125,7 @@ final class Board: Node, CustomStringConvertible {
         return Board(state: childNodes, parent: self, goal: goal)
     }
     private func moveLeft() -> Board? {
-        if blank.column == 0 { return nil }
+        if blank.line == 0 { return nil }
         let childNodes = swapNodes(position1: blank, position2: Position(column: blank.column - 1, line: blank.line))
         return Board(state: childNodes, parent: self, goal: goal)
     }
@@ -153,16 +146,39 @@ final class Board: Node, CustomStringConvertible {
         return positions.count
     }
 
-    func backtrack() {
-        print(self)
+    func backtrack() -> [Board] {
+        var sol: [Board] = []
         var node = parent!
+        sol.append(self)
 
         while (node.parent != nil) {
-            print(node)
+            sol.append(node)
             node = node.parent!
         }
 
+        sol.append(node)
+
+        return sol
     }
+}
+
+struct BoardStub {
+    static let goal = Board(state: [
+        [1, 2, 3],
+        [8, 0, 4],
+        [7, 6, 5]
+        ], parent: nil, goal: nil)
+
+    static let puzzle =
+        Board(state: [
+            [1, 3, 4],
+            [8, 6, 2],
+            [0, 7, 5]
+            ], parent: nil, goal: BoardStub.goal)
 
 }
+
+
+//let result = AStar.solve(BoardStub.puzzle, goal: BoardStub.goal)
+
 

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DA075F811D5EB8300032789A /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA075F801D5EB8300032789A /* Tests.swift */; };
-		DA075F991D5EBA3A0032789A /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3051D5D3A2100898148 /* AStar.swift */; };
-		DA075F9A1D5EBA3A0032789A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3071D5D3AED00898148 /* Board.swift */; };
+		DA075F9C1D5FCDA50032789A /* SwiftPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA075F9B1D5FCDA50032789A /* SwiftPriorityQueue.swift */; };
+		DA075F9D1D5FDC2C0032789A /* SwiftPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA075F9B1D5FCDA50032789A /* SwiftPriorityQueue.swift */; };
+		DA075F9E1D5FDC2C0032789A /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3051D5D3A2100898148 /* AStar.swift */; };
 		DAA7D3061D5D3A2100898148 /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3051D5D3A2100898148 /* AStar.swift */; };
-		DAA7D3081D5D3AED00898148 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D3071D5D3AED00898148 /* Board.swift */; };
 		DADE59291D5AA3BF00F30331 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE59281D5AA3BF00F30331 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +31,9 @@
 		DA075F7E1D5EB8300032789A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA075F801D5EB8300032789A /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		DA075F821D5EB8300032789A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA075F9B1D5FCDA50032789A /* SwiftPriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPriorityQueue.swift; sourceTree = "<group>"; };
+		DA6DA9461D63CA8A00B3F7F3 /* 8Puzzle.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 8Puzzle.playground; sourceTree = "<group>"; };
 		DAA7D3051D5D3A2100898148 /* AStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AStar.swift; sourceTree = "<group>"; };
-		DAA7D3071D5D3AED00898148 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		DADE59251D5AA3BF00F30331 /* 8PuzleAStar */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 8PuzleAStar; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADE59281D5AA3BF00F30331 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +71,7 @@
 				DADE59271D5AA3BF00F30331 /* 8PuzleAStar */,
 				DA075F7F1D5EB8300032789A /* Tests */,
 				DADE59261D5AA3BF00F30331 /* Products */,
+				DA6DA9461D63CA8A00B3F7F3 /* 8Puzzle.playground */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +96,8 @@
 		DADE59371D5AAA8A00F30331 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DA075F9B1D5FCDA50032789A /* SwiftPriorityQueue.swift */,
 				DAA7D3051D5D3A2100898148 /* AStar.swift */,
-				DAA7D3071D5D3AED00898148 /* Board.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -188,9 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA075F9E1D5FDC2C0032789A /* AStar.swift in Sources */,
 				DA075F811D5EB8300032789A /* Tests.swift in Sources */,
-				DA075F991D5EBA3A0032789A /* AStar.swift in Sources */,
-				DA075F9A1D5EBA3A0032789A /* Board.swift in Sources */,
+				DA075F9D1D5FDC2C0032789A /* SwiftPriorityQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,9 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA7D3081D5D3AED00898148 /* Board.swift in Sources */,
 				DADE59291D5AA3BF00F30331 /* main.swift in Sources */,
 				DAA7D3061D5D3A2100898148 /* AStar.swift in Sources */,
+				DA075F9C1D5FCDA50032789A /* SwiftPriorityQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +316,7 @@
 		DADE592D1D5AA3BF00F30331 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -335,6 +338,7 @@
 				DA075F851D5EB8300032789A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DADE59201D5AA3BF00F30331 /* Build configuration list for PBXProject "8PuzleAStar" */ = {
 			isa = XCConfigurationList;
