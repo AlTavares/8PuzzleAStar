@@ -27,9 +27,9 @@ let medium = Board(state: [
     ], parent: nil, goal: goal)
 
 let hard = Board(state: [
-    [2, 8, 1],
-    [4, 6, 3],
-    [0, 7, 5]
+    [0, 5, 7],
+    [4, 6, 8],
+    [3, 2, 1]
     ], parent: nil, goal: goal)
 
 let worst = Board(state: [
@@ -38,4 +38,4 @@ let worst = Board(state: [
     [3, 2, 1]
     ], parent: nil, goal: goal)
 
-let path = AStar.solve(worst, goal: goal)
+AStar.solve(hard, goal: goal)

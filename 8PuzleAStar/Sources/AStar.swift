@@ -21,8 +21,9 @@ class AStar {
             let currentNode = frontier.pop()! // we know if there are still items, we can pop one
 
             if currentNode.isGoal {
+                currentNode.backtrack()
                 print("Searched \(nodesSearched) nodes.")
-                return currentNode.backtrack()
+                return
             }
 
             for child in currentNode.children {
@@ -61,7 +62,7 @@ protocol Node: class, Comparable, Hashable { // , Comparable, Hashable {
 typealias Pieces = [[Int]]
 
 func == (lhs: Board, rhs: Board) -> Bool {
-    return lhs.positions == rhs.positions
+    return lhs.heuristic != rhs.heuristic ? false : lhs.positions == rhs.positions
 }
 
 func < (lhs: Board, rhs: Board) -> Bool {
@@ -109,7 +110,7 @@ final class Board: Node, CustomStringConvertible {
     }
 
     var isGoal: Bool {
-        return self.positions == goal!.positions
+        return self == goal
     }
 
     var children: [Board] {

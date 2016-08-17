@@ -26,7 +26,7 @@ class Tests: XCTestCase {
 
     func testAStar() {
         measureBlock {
-            let path = AStar.solve(BoardStub.worst, goal: BoardStub.goal)
+            AStar.solve(BoardStub.hard, goal: BoardStub.goal)
         }
     }
 
@@ -65,9 +65,9 @@ struct BoardStub {
         ], parent: nil, goal: BoardStub.goal)
 
     static let hard = Board(state: [
-        [2, 8, 0],
-        [4, 6, 3],
-        [1, 7, 5]
+        [0, 5, 7],
+        [4, 6, 8],
+        [3, 2, 1]
         ], parent: nil, goal: BoardStub.goal)
 
     static let worst = Board(state: [
