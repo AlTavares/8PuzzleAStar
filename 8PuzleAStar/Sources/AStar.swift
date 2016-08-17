@@ -27,16 +27,13 @@ class AStar {
             }
 
             for child in currentNode.children {
-                let newcost = currentNode.cost + 1 // 1 assumes a grid, there should be a cost function
-                if explored[child] == nil || (explored[child] > newcost) {
-                    explored[child] = newcost
+                if explored[child] == nil || (explored[child] > child.cost) {
+                    explored[child] = child.cost
                     frontier.push(child)
                 }
             }
         }
-
     }
-
 }
 
 struct Position: Equatable {
