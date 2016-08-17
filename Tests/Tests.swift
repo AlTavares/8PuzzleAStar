@@ -26,13 +26,47 @@ class Tests: XCTestCase {
 
     func testAStar() {
         measureBlock {
-            AStar.solve(BoardStub.hard, goal: BoardStub.goal)
+            AStar.solve(BoardStub.hard)
         }
     }
 
     func testChildrenPuzzles() {
-        // print(BoardStub.blankInCenter.childrenBoards)
-        // XCTAssertEqual(BoardStub.blankInCenter.childrenBoards.count, 4)
+        let children = BoardStub.worst.children
+        XCTAssertEqual(children.count, 4)
+        let top = children[0]
+        let right = children[1]
+        let bottom = children[2]
+        let left = children[3]
+
+        let expectedTop = Board(state: [
+            [5, 0, 7],
+            [4, 6, 8],
+            [3, 2, 1]
+            ], parent: nil, goal: BoardStub.goal)
+
+        let expectedRight = Board(state: [
+            [5, 6, 7],
+            [4, 8, 0],
+            [3, 2, 1]
+            ], parent: nil, goal: BoardStub.goal)
+
+        let expectedBottom = Board(state: [
+            [5, 6, 7],
+            [4, 2, 8],
+            [3, 0, 1]
+            ], parent: nil, goal: BoardStub.goal)
+
+        let expectedLeft = Board(state: [
+            [5, 6, 7],
+            [0, 4, 8],
+            [3, 2, 1]
+            ], parent: nil, goal: BoardStub.goal)
+
+        XCTAssertEqual(top, expectedTop)
+        XCTAssertEqual(right, expectedRight)
+        XCTAssertEqual(bottom, expectedBottom)
+        XCTAssertEqual(left, expectedLeft)
+
     }
 
     func testPositions() {
