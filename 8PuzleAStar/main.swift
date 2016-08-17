@@ -38,4 +38,4 @@ let worst = Board(state: [
     [3, 2, 1]
     ], parent: nil, goal: goal)
 
-AStar.solve(hard, goal: goal)
+AStar.solve(hard)

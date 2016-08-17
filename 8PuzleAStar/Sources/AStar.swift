@@ -9,7 +9,7 @@
 import Foundation
 
 class AStar {
-    class func solve<T: Node>(initialNode: T, goal: T) {
+    class func solve<T: Node>(initialNode: T) {
         var frontier = PriorityQueue.init(ascending: true, startingValues: [initialNode])
         var explored = Dictionary<T, Float>()
         explored[initialNode] = 0
