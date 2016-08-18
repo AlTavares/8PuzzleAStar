@@ -10,26 +10,28 @@ import Foundation
 
 class AStar {
     class func solve<T: Node>(initialNode: T) {
-        var frontier = PriorityQueue.init(ascending: true, startingValues: [initialNode])
-        var explored = Dictionary<T, Float>()
+        var openList = PriorityQueue.init(ascending: true, startingValues: [initialNode])
+        var explored = [T: Float]()
         explored[initialNode] = 0
         var nodesSearched: Int = 0
 
-        while !frontier.isEmpty {
+        while !openList.isEmpty {
             nodesSearched += 1
             print(nodesSearched)
-            let currentNode = frontier.pop()! // we know if there are still items, we can pop one
+            let currentNode = openList.pop()! // we know if there are still items, we can pop one
 
             if currentNode.isGoal {
                 currentNode.backtrack()
                 print("Searched \(nodesSearched) nodes.")
+                print("\(Int(currentNode.cost)) steps")
+
                 return
             }
 
             for child in currentNode.children {
                 if explored[child] == nil || (explored[child] > child.cost) {
                     explored[child] = child.cost
-                    frontier.push(child)
+                    openList.push(child)
                 }
             }
         }

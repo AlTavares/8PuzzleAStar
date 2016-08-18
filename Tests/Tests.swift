@@ -26,7 +26,7 @@ class Tests: XCTestCase {
 
     func testAStar() {
         measureBlock {
-            AStar.solve(BoardStub.hard)
+            AStar.solve(BoardStub.worst)
         }
     }
 
