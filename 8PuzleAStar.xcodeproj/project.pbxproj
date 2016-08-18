@@ -32,7 +32,6 @@
 		DA075F801D5EB8300032789A /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		DA075F821D5EB8300032789A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA075F9B1D5FCDA50032789A /* SwiftPriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPriorityQueue.swift; sourceTree = "<group>"; };
-		DA6DA9461D63CA8A00B3F7F3 /* 8Puzzle.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 8Puzzle.playground; sourceTree = "<group>"; };
 		DAA7D3051D5D3A2100898148 /* AStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AStar.swift; sourceTree = "<group>"; };
 		DADE59251D5AA3BF00F30331 /* 8PuzleAStar */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 8PuzleAStar; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADE59281D5AA3BF00F30331 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 				DADE59271D5AA3BF00F30331 /* 8PuzleAStar */,
 				DA075F7F1D5EB8300032789A /* Tests */,
 				DADE59261D5AA3BF00F30331 /* Products */,
-				DA6DA9461D63CA8A00B3F7F3 /* 8Puzzle.playground */,
 			);
 			sourceTree = "<group>";
 		};
