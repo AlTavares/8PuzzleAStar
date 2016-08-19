@@ -10,14 +10,13 @@ import Foundation
 
 class AStar {
     class func solve<T: Node>(initialNode: T) {
-        var openList = PriorityQueue.init(ascending: true, startingValues: [initialNode])
+        var openList = PriorityQueue(ascending: true, startingValues: [initialNode])
         var explored = [T: Float]()
         explored[initialNode] = 0
         var nodesSearched: Int = 0
 
         while !openList.isEmpty {
             nodesSearched += 1
-            print(nodesSearched)
             let currentNode = openList.pop()! // we know if there are still items, we can pop one
 
             if currentNode.isGoal {
@@ -61,7 +60,7 @@ protocol Node: class, Comparable, Hashable { // , Comparable, Hashable {
 typealias Pieces = [[Int]]
 
 func == (lhs: Board, rhs: Board) -> Bool {
-    return lhs.heuristic != rhs.heuristic ? false : lhs.positions == rhs.positions
+    return lhs.heuristic != rhs.heuristic ? false : lhs.positionString == rhs.positionString
 }
 
 func < (lhs: Board, rhs: Board) -> Bool {
@@ -76,6 +75,7 @@ final class Board: Node, CustomStringConvertible {
     var positions = [Int: Position]()
     var blank: Position!
     let goal: Board?
+    var positionString = ""
 
     init(state: Pieces, parent: Board?, goal: Board?) {
         self.state = state
@@ -86,7 +86,7 @@ final class Board: Node, CustomStringConvertible {
         self.heuristic = Float(manhattan())
     }
 
-    var hashValue: Int { return (Int)(self.cost + self.heuristic) }
+    var hashValue: Int { return positionString.hashValue }
 
     var description: String {
         var string = "\n" + state.map { $0.description }.joinWithSeparator("\n")
@@ -146,6 +146,7 @@ final class Board: Node, CustomStringConvertible {
     private func calculatePositions() -> Int {
         for (line, row) in state.enumerate() {
             for (column, node) in row.enumerate() {
+                positionString += node.description
                 positions[node] = Position(column: column, line: line)
             }
         }
