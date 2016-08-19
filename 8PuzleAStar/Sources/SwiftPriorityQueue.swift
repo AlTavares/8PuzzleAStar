@@ -66,7 +66,7 @@ public struct PriorityQueue<T: Comparable> {
     /// Add a new element onto the Priority Queue. O(lg n)
     ///
     /// - parameter element: The element to be inserted into the Priority Queue.
-    public mutating func push(_ element: T) {
+    public mutating func push(element: T) {
         heap.append(element)
         swim(heap.count - 1)
     }
@@ -103,7 +103,7 @@ public struct PriorityQueue<T: Comparable> {
     }
     
     // Based on example from Sedgewick p 316
-    private mutating func sink(_ index: Int) {
+    private mutating func sink(index: Int) {
         var index = index
         while 2 * index + 1 < heap.count {
             
@@ -118,7 +118,7 @@ public struct PriorityQueue<T: Comparable> {
     }
     
     // Based on example from Sedgewick p 316
-    private mutating func swim(_ index: Int) {
+    private mutating func swim(index: Int) {
         var index = index
         while index > 0 && ordered(heap[(index - 1) / 2], heap[index]) {
             swap(&heap[(index - 1) / 2], &heap[index])
