@@ -38,4 +38,7 @@ let worst = Board(state: [
     [3, 2, 1]
     ], parent: nil, goal: goal)
 
-AStar.solve(hard)
+let dateIni = NSDate()
+AStar.solve(worst)
+
+print("Execution Time: " + Int(NSDate().timeIntervalSinceDate(dateIni) * 1000).description + "ms")

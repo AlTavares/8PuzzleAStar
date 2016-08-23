@@ -85,7 +85,6 @@
 		DADE59271D5AA3BF00F30331 /* 8PuzleAStar */ = {
 			isa = PBXGroup;
 			children = (
-				DADE59281D5AA3BF00F30331 /* main.swift */,
 				DADE59371D5AAA8A00F30331 /* Sources */,
 			);
 			path = 8PuzleAStar;
@@ -94,6 +93,7 @@
 		DADE59371D5AAA8A00F30331 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DADE59281D5AA3BF00F30331 /* main.swift */,
 				DA075F9B1D5FCDA50032789A /* SwiftPriorityQueue.swift */,
 				DAA7D3051D5D3A2100898148 /* AStar.swift */,
 			);
